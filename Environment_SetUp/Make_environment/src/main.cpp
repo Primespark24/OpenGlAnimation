@@ -63,89 +63,49 @@ class test_app : public sb7::application{
         objects[0].parentObj = NULL; // Base object, no parent
         objects[0].hierTrans = vmath::vec3(0.0f,-2.0f,0.0f); //Starts at origin in the hierarchy
         objects[0].rotVector = vmath::vec3(0.0f,1.0f,0.0f); //Rotating around Y
-        objects[0].originalTransform = vmath::mat4::identity();
+        objects[0].originalTransform = vmath::mat4::identity() * vmath::scale(0.5f,0.5f,0.5f);
 
         objects[1].objFileName = ".\\bin\\media\\Windmill\\Pole.obj";
         objects[1].texFileName = ".\\bin\\media\\robot\\robot_base_texture.bmp";
         objects[1].parentObj = &objects[0]; // Base object, no parent
-        objects[1].hierTrans = vmath::vec3(0.0f,-2.0f,0.0f); //Starts at origin in the hierarchy
+        objects[1].hierTrans = vmath::vec3(0.0f,0.0f,0.0f); //Starts at origin in the hierarchy
         objects[1].rotVector = vmath::vec3(0.0f,1.0f,0.0f); //Rotating around Y
-        objects[1].originalTransform = vmath::mat4::identity();
+        objects[1].originalTransform = vmath::mat4::identity(); //* vmath::scale(0.5f,0.5f,0.5f);
 
         objects[2].objFileName = ".\\bin\\media\\Windmill\\Axle.obj";
         objects[2].texFileName = ".\\bin\\media\\robot\\robot_base_texture.bmp";
         objects[2].parentObj = &objects[0]; // Base object, no parent
-        objects[2].hierTrans = vmath::vec3(0.0f,-2.0f,0.0f); //Starts at origin in the hierarchy
+        objects[2].hierTrans = vmath::vec3(0.0f,-0.5f,0.0f); //Starts at origin in the hierarchy
         objects[2].rotVector = vmath::vec3(0.0f,1.0f,0.0f); //Rotating around Y
-        objects[2].originalTransform = vmath::mat4::identity();
+        objects[2].originalTransform = vmath::mat4::identity(); //* vmath::scale(0.5f,0.5f,0.5f);
 
         objects[3].objFileName = ".\\bin\\media\\Windmill\\BladeDown.obj";
         objects[3].texFileName = ".\\bin\\media\\robot\\robot_base_texture.bmp";
         objects[3].parentObj = &objects[2]; // Base object, no parent
-        objects[3].hierTrans = vmath::vec3(0.0f,-2.0f,0.0f); //Starts at origin in the hierarchy
+        objects[3].hierTrans = vmath::vec3(0.0f,0.0f,0.0f); //Starts at origin in the hierarchy
         objects[3].rotVector = vmath::vec3(0.0f,1.0f,0.0f); //Rotating around Y
-        objects[3].originalTransform = vmath::mat4::identity();
+        objects[3].originalTransform = vmath::mat4::identity(); //* vmath::scale(0.5f,0.5f,0.5f);
 
         objects[4].objFileName = ".\\bin\\media\\Windmill\\BladeRight.obj";
         objects[4].texFileName = ".\\bin\\media\\robot\\robot_base_texture.bmp";
         objects[4].parentObj = &objects[2]; // Base object, no parent
-        objects[4].hierTrans = vmath::vec3(0.0f,-2.0f,0.0f); //Starts at origin in the hierarchy
+        objects[4].hierTrans = vmath::vec3(0.0f,0.0f,0.0f); //Starts at origin in the hierarchy
         objects[4].rotVector = vmath::vec3(0.0f,1.0f,0.0f); //Rotating around Y
-        objects[4].originalTransform = vmath::mat4::identity();
+        objects[4].originalTransform = vmath::mat4::identity(); //* vmath::scale(0.5f,0.5f,0.5f);
 
         objects[5].objFileName = ".\\bin\\media\\Windmill\\BladeLeft.obj";
         objects[5].texFileName = ".\\bin\\media\\robot\\robot_base_texture.bmp";
         objects[5].parentObj = &objects[2]; // Base object, no parent
-        objects[5].hierTrans = vmath::vec3(0.0f,-2.0f,0.0f); //Starts at origin in the hierarchy
+        objects[5].hierTrans = vmath::vec3(0.0f,0.0f,0.0f); //Starts at origin in the hierarchy
         objects[5].rotVector = vmath::vec3(0.0f,1.0f,0.0f); //Rotating around Y
-        objects[5].originalTransform = vmath::mat4::identity();
+        objects[5].originalTransform = vmath::mat4::identity(); //* vmath::scale(0.5f,0.5f,0.5f);
 
         objects[6].objFileName = ".\\bin\\media\\Windmill\\BladeUp.obj";
         objects[6].texFileName = ".\\bin\\media\\robot\\robot_base_texture.bmp";
         objects[6].parentObj = &objects[2]; // Base object, no parent
-        objects[6].hierTrans = vmath::vec3(0.0f,-2.0f,0.0f); //Starts at origin in the hierarchy
+        objects[6].hierTrans = vmath::vec3(0.0f,0.0f,0.0f); //Starts at origin in the hierarchy
         objects[6].rotVector = vmath::vec3(0.0f,1.0f,0.0f); //Rotating around Y
-        objects[6].originalTransform = vmath::mat4::identity();
-
-        //start with robot base
-        // objects[0].objFileName = ".\\bin\\media\\robot\\robot_base.obj";
-        // objects[0].texFileName = ".\\bin\\media\\robot\\robot_base_texture.bmp";
-        // objects[0].parentObj = NULL; // Base object, no parent
-        // objects[0].hierTrans = vmath::vec3(0.0f,-2.0f,0.0f); //Starts at origin in the hierarchy
-        // objects[0].rotVector = vmath::vec3(0.0f,1.0f,0.0f); //Rotating around Y
-        // objects[0].originalTransform = vmath::mat4::identity();
-
-        // //Load lower arm
-        // objects[1].objFileName = ".\\bin\\media\\robot\\robot_lowerArm.obj";
-        // objects[1].texFileName = ".\\bin\\media\\robot\\robot_lower_texture.bmp";
-        // objects[1].parentObj = &objects[0]; // Points to base defined above
-        // objects[1].hierTrans = vmath::vec3(0.0f,0.0f,0.0f); //Modeled at the origin in the hierarchy
-        // objects[1].rotVector = vmath::vec3(1.0f,0.0f,0.0f); //Rotating around x
-        // objects[1].originalTransform = vmath::mat4::identity();
-
-        // //Load upper arm
-        // objects[2].objFileName = ".\\bin\\media\\robot\\robot_upperArm.obj";
-        // objects[2].texFileName = ".\\bin\\media\\robot\\robot_upper_texture.bmp";
-        // objects[2].parentObj = &objects[1]; // Points to base defined above
-        // objects[2].hierTrans = vmath::vec3(0.0f,1.9f,0.0f); //Modeled at the origin in the hierarchy 
-        // objects[2].rotVector = vmath::vec3(1.0f,0.0f,0.0f); //Rotating around x
-        // objects[2].originalTransform = vmath::mat4::identity();
-
-        // //Load first gripper
-        // objects[3].objFileName = ".\\bin\\media\\robot\\robot_gripper.obj";
-        // objects[3].texFileName = ".\\bin\\media\\robot\\robot_gripper.bmp";
-        // objects[3].parentObj = &objects[2]; // Points to base defined above
-        // objects[3].hierTrans = vmath::vec3(0.0f,1.17f,0.0f); //Modeled at the origin in the hierarchy 
-        // objects[3].rotVector = vmath::vec3(0.0f,0.0f,1.0f); //Rotating around x
-        // objects[3].originalTransform = vmath::mat4::identity();
-
-        // //Load second gripper
-        // objects[4].objFileName = ".\\bin\\media\\robot\\robot_gripper.obj";
-        // objects[4].texFileName = ".\\bin\\media\\robot\\robot_gripper.bmp";
-        // objects[4].parentObj = &objects[2]; // Points to base defined above
-        // objects[4].hierTrans = vmath::vec3(0.0f,1.17f,0.0f); //Modeled at the origin in the hierarchy 
-        // objects[4].rotVector = vmath::vec3(0.0f,0.0f,1.0f); //Rotating around x
-        // objects[4].originalTransform = vmath::mat4::identity() * vmath::scale(-1.0f,1.0f,1.0f); //FLIP!
+        objects[6].originalTransform = vmath::mat4::identity(); //* vmath::scale(0.5f,0.5f,0.5f);
 
         //Load objects
         for(int i = 0; i < objects.size(); i++){
