@@ -1,0 +1,21 @@
+#version 450 core  
+
+//Based on sb7 cubemapenv
+
+//Ouput to fragment shader
+out vec2 vs_uv;
+
+uniform mat4 transform; //Transformation matrix
+uniform mat4 perspective; //Perspective transform
+uniform mat4 toCamera; //world to Camera transform
+
+in vec4 obj_vertex; //Currently being drawn point (of a triangle)
+in vec2 obj_uv;     //Currently being drawn texture maping of point
+                                                                  
+void main(void) {
+    //Vertex processing
+    gl_Position = perspective * toCamera * transform * obj_vertex;
+
+    //Texture mapping and Color
+    vs_uv = obj_uv;
+}                                                                 
