@@ -76,7 +76,7 @@ class test_app : public sb7::application{
         objects[2].texFileName = ".\\bin\\media\\Windmill\\White.BMP";
         objects[2].parentObj = &objects[0]; // subject to Body
         objects[2].hierTrans = vmath::vec3(0.0f,-0.5f,0.0f); //Starts at origin in the hierarchy
-        objects[2].rotVector = vmath::vec3(0.0f,1.0f,0.0f); //Rotating around x
+        objects[2].rotVector = vmath::vec3(1.0f,0.0f,0.0f); //Rotating around x
         objects[2].originalTransform = vmath::mat4::identity();
 
         objects[3].objFileName = ".\\bin\\media\\Windmill\\BladeDown.obj";
@@ -313,15 +313,11 @@ class test_app : public sb7::application{
         //If Auto Animation flag is set:
         if(autoAnimate){
             //Rotate base around
-            //objects[0].rotAngle = curTime*10;
+            objects[0].rotAngle = curTime*10;
             //Flip objects around
             objects[1].rotAngle = (cos(curTime/2.0) * 35.0) + 35.0; // 70 <-> 0
-            objects[2].rotAngle =  curTime*20;         //cos(curTime*1.5) * 55.0; // 55 <-> -55
+            objects[2].rotAngle = (sin(curTime/8.0) * 360);
 
-            objects[3].rotAngle = (sin(curTime/8.0) * 360);
-            objects[4].rotAngle = (sin(curTime/8.0) * 360);
-            objects[5].rotAngle = (sin(curTime/8.0) * 360);
-            objects[6].rotAngle = (sin(curTime/8.0) * 360);
         }
 
         //Update all of the object2World Matrices
@@ -338,11 +334,16 @@ class test_app : public sb7::application{
         //Draw the skyCube!
         drawSkyCube(curTime);
 
+        glUseProgram(rendering_program);
+
         runtime_error_check(2);
 
         //Camera and projection are both the same for all objects
         glUniformMatrix4fv(perspec_ID, 1,GL_FALSE, camera.proj_Matrix); //Load camera projection
+        runtime_error_check(13);
         glUniformMatrix4fv(toCam_ID, 1,GL_FALSE, camera.view_mat); //Load in view matrix for camera
+
+        runtime_error_check(14);
 
         for(int i = 0; i < objects.size(); i++ ){
             runtime_error_check(12);
