@@ -1,6 +1,5 @@
 # Blender v2.92.0 OBJ File: 'BladeUp.blend'
 # www.blender.org
-mtllib BladeUp.mtl
 o Blade-Up_Cube.001
 v -2.852968 4.855285 0.053771
 v -2.720707 4.882740 0.023184
@@ -799,7 +798,6 @@ vn 0.9887 0.0705 0.1320
 vn 0.9417 -0.3362 -0.0121
 vn -0.0206 -0.9997 -0.0120
 vn 0.1768 -0.0286 -0.9838
-usemtl Blades
 s off
 f 4/1/1 2/2/1 3/3/1
 f 6/4/2 4/1/2 3/3/2

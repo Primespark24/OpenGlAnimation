@@ -1,6 +1,5 @@
 # Blender v2.92.0 OBJ File: 'BladeDown.blend'
 # www.blender.org
-mtllib BladeDown.mtl
 o Blade-Down_Cube.003
 v -2.831478 4.281741 0.648594
 v -2.718803 1.635923 0.609860
@@ -742,7 +741,6 @@ vn 0.9812 0.0029 -0.1930
 vn 0.9804 -0.0898 -0.1754
 vn 0.9478 0.3176 -0.0293
 vn 0.2205 0.0240 0.9751
-usemtl Blades
 s off
 f 284/1/1 4/2/1 149/3/1
 f 164/4/2 156/5/2 192/6/2

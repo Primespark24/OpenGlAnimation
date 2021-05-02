@@ -1,6 +1,5 @@
 # Blender v2.92.0 OBJ File: 'RightBlade.blend'
 # www.blender.org
-mtllib RightBlade.mtl
 o Blade-Right_Cube.004
 v -2.881046 4.267322 -0.689261
 v -2.836133 4.258693 -3.337364
@@ -743,7 +742,6 @@ vn 0.2314 -0.9729 -0.0033
 vn 0.9904 0.1359 -0.0253
 vn -0.0252 -0.0027 -0.9997
 vn -0.0130 -0.9977 0.0673
-usemtl Blades
 s off
 f 284/1/1 4/2/1 149/3/1
 f 164/4/2 156/5/2 192/6/2

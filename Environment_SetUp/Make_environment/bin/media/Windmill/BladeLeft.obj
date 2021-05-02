@@ -1,6 +1,5 @@
 # Blender v2.92.0 OBJ File: 'BladeLeft.blend'
 # www.blender.org
-mtllib BladeLeft.mtl
 o Blade-Left_Cube.002
 v -2.857284 5.646043 0.671426
 v -2.687244 5.673446 3.314319
@@ -743,7 +742,6 @@ vn 0.9855 -0.1686 -0.0199
 vn 0.2126 0.9770 -0.0154
 vn 0.9731 -0.0168 -0.2297
 vn 0.0135 0.9982 -0.0592
-usemtl Blades
 s off
 f 284/1/1 4/2/1 149/3/1
 f 164/4/2 156/5/2 192/6/2
