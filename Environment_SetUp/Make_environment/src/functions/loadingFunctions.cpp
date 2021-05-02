@@ -1,4 +1,3 @@
-
 #include <loadingFunctions.h>
 //Object Loading Information
 //Referenced from https://en.wikibooks.org/wiki/OpenGL_Programming/Modern_OpenGL_Tutorial_Load_OBJ
@@ -284,6 +283,4 @@ add_library(sb7
             src/functions/loadingFunctions.cpp     <<<<< Add these lines
             src/functions/skybox.cpp               <<<<<
 )
-
-
 */
