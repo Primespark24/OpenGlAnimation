@@ -316,7 +316,7 @@ class test_app : public sb7::application{
             objects[0].rotAngle = curTime*10;
             //Flip objects around
             objects[1].rotAngle = (cos(curTime/2.0) * 35.0) + 35.0; // 70 <-> 0
-            objects[2].rotAngle = (sin(curTime/8.0) * 360);
+            objects[2].rotAngle = (90 * cos(curTime/2.0) - sin(curTime/4.0));
 
         }
 
