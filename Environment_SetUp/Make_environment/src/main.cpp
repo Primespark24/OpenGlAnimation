@@ -512,22 +512,6 @@ class test_app : public sb7::application{
                     camera.position = vmath::vec3(0.0f, 0.0f, 5.0f); //Starting camera at position (0,0,5)
                     camera.focus = vmath::vec3(0.0f, 0.0f, 0.0f); //Camera is looking in the +y direction
                     break;
-                case 'X': //Info
-                    char buf[50];
-                    sprintf(buf, "Current Camera Pos:(%.3f,%.3f,%.3f) Focus:(%.3f,%.3f,%.3f)",
-                                       camera.position[0],camera.position[1],camera.position[2],
-                                       camera.focus[0],camera.focus[1],camera.focus[2]);
-                    MessageBoxA(NULL, buf, "Diagnostic Printout", MB_OK);
-                    break;
-                case 'M': //Info
-                    char buf2[200];
-                    sprintf(buf2, "Current Not translation mat \n[ %.3f, %.3f, %.3f, %.3f] \n[ %.3f, %.3f, %.3f, %.3f] \n[ %.3f, %.3f, %.3f, %.3f] \n[ %.3f, %.3f, %.3f, %.3f]",
-                                       camera.view_mat_no_translation[0][0],camera.view_mat_no_translation[0][1],camera.view_mat_no_translation[0][2],camera.view_mat_no_translation[0][3],
-                                       camera.view_mat_no_translation[1][0],camera.view_mat_no_translation[1][1],camera.view_mat_no_translation[1][2],camera.view_mat_no_translation[1][3],
-                                       camera.view_mat_no_translation[2][0],camera.view_mat_no_translation[2][1],camera.view_mat_no_translation[2][2],camera.view_mat_no_translation[2][3],
-                                       camera.view_mat_no_translation[3][0],camera.view_mat_no_translation[3][1],camera.view_mat_no_translation[3][2],camera.view_mat_no_translation[3][3]);
-                    MessageBoxA(NULL, buf2, "Diagnostic Printout", MB_OK);
-                    break;
             }
         }
 
