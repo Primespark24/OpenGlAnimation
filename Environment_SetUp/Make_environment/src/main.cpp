@@ -66,7 +66,7 @@ class test_app : public sb7::application{
         objects[0].originalTransform = vmath::mat4::identity() * vmath::scale(0.5f,0.5f,0.5f);
 
         objects[1].objFileName = ".\\bin\\media\\Windmill\\Pole.obj";
-        objects[1].texFileName = ".\\bin\\media\\Windmill\\Red.BMP";
+        objects[1].texFileName = ".\\bin\\media\\Windmill\\Arrow.BMP";
         objects[1].parentObj = &objects[0]; // subject to Body
         objects[1].hierTrans = vmath::vec3(0.0f,0.0f,0.0f); //Starts at origin in the hierarchy
         objects[1].rotVector = vmath::vec3(0.0f,1.0f,0.0f); //Rotating around Y
